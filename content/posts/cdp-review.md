@@ -6,9 +6,6 @@ weight: 3
 date: 2020-08-01T21:20:04-06:00
 draft: false
 ---
-
-# Review: Practical DevSecOps CDP
-
 ## TL;DR
 
 - Won't make you an expert, but gives **very good base**
