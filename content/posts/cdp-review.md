@@ -2,7 +2,7 @@
 title: "Review: Practical DevSecOps CDP"
 image: images/devops2.PNG
 showonlyimage: false
-weight: 2
+weight: 3
 date: 2020-08-01T21:20:04-06:00
 draft: false
 ---
