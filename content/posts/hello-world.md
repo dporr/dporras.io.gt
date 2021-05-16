@@ -5,7 +5,7 @@ draft: false
 ---
 
 # This is a hellow world
-### Compiling from gitgub actions
+### Compiling from gitgub actionsp push
 
 ![ abt moi ][1]
 
