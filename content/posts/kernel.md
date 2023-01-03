@@ -131,13 +131,17 @@ was reached showed that the buffer was corrput from the previous iteration
 
 This chapter includes a nice reference to header fields, macros & functions that are required as the basis for any module. 
 
+
 Take aways:
+
 
 * `insmod` uses the `sys_init_module` system call defined on `kernel/module.c`. sys_init_module allocates kernel memory using `vmalloc`.
 
 - Must have concurrency in mind  when writting kernel code
 - allocate vs register: Things are only available to kernel after registering them, allocation must happen before.
-- Modules need, at least, the following headers
+
+
+* Modules need, at least, the following headers
    - #include <linux/module.h>
    - #include <linux/init.h>
 
@@ -148,7 +152,7 @@ Take aways:
    - MODULE_ALIAS
    - MODULE_DEVICE_TABLE
 
-- `modprobe` does additional symbol resolution searching for additional modules and object files on its default path, on the contrary using `insmod` all the individual modules that make a driver need to be loaded explicitly 
+* `modprobe` does additional symbol resolution searching for additional modules and object files on its default path, on the contrary using `insmod` all the individual modules that make a driver need to be loaded explicitly 
 
 - Module initialization
 ```c
@@ -166,7 +170,7 @@ static void __exit cleanup(void){
 module_exit(cleanup);
 ```
 
-- Strategies for module cleanup.
+#### Strategies for module cleanup.
    - using goto
    ```c
    void __init my_init_function(void){
