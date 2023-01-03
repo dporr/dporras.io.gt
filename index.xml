@@ -2,6 +2,6 @@
 This was about getting a completely free one month access (30 days) to any of their programs. I took advantage and gave it a try. I enrolled in the DevOps nanodegree and here are my thoughts.
 TL;DR The program is worth it if you have basic knowledge of cloud and docker containers.</description></item><item><title>Kernel Adventures</title><link>https://dporras.io.gt/posts/kernel/</link><pubDate>Sun, 01 Jan 2023 22:15:52 +0000</pubDate><guid>https://dporras.io.gt/posts/kernel/</guid><description>Tile image source: https://static.lwn.net/images/pdf/LDD3/ch01.pdf
 How much about linux kernel can be learned in 30 days? Let&amp;rsquo;s find out.
-Day 1: CH1: An introduction to device drivers &amp;ldquo;The Linux kernel remains a large and complex body of code, however, and would-be kernel hackers need an entry point where they can approach the code without being overwhelmed by com- plexity. Often, device drivers provide that gateway&amp;rdquo;
-Take aways:
-The kernel functionality can be roughly classified as: Process management Memory management Filesystems Device control Networking Device drivers could be of mainly 3 types (There are other more specialized types): Char modules Block modules Network modules In linux a module is a hot-pluggable piece of object code.</description></item></channel></rss>
+The content for the series comes mainly from 2 resources used in no particualr order.
+Linux Device Drivers, Third Edition. Freely available here https://lwn.net/Kernel/LDD3/ Hamburg&amp;rsquo;s university - Advent(2) - https://osg.tuhh.de/Advent/
+Each day I wil publish a list of lessons learned from the linked material, any additional resources I used and things that were particularly interesting while doing the practical parts.</description></item></channel></rss>
