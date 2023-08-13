@@ -1,5 +1,5 @@
-baseurl = "https://dporras.io.gt/"
-title = "dporras.io.gt"
+baseurl = "http://aleph.theartofhacking.club/"
+title = "The Art of hacking - blog"
 theme = "hugo-creative-portfolio-theme"
 languageCode = "en-us"
 # Enable comments by entering your Disqus shortname
@@ -12,9 +12,9 @@ disqusShortname = ""
   # Use custom.css for your custom styling
   style = "pink"
   description = "Collection of posts about things I learn and try to explain: hacking, code, backend, aws, devops, devsecops and whatever I find interesting"
-  copyright = "&copy;2020 Diego Porras - Actually copy and reproduce whatever you want. DRM Free :D"
+  copyright = "&copy;2023 Diego Porras - Actually copy and reproduce whatever you want. DRM Free :D"
   sidebarAbout = [
-    "AppSec Engineer that loves coding & pentest. AWS fanboy, DevSecOps apprentice. #Cloud #Automation #Hacking #AppSec #Python #DevSecOps #Coffee #OfCourseMoreCoffee"
+    "AppSec Engineer. Trying to do low level stuff"
   ]
   # Contact page
      # Since this template is static, the contact form uses www.formspree.io as a
@@ -28,7 +28,7 @@ disqusShortname = ""
      # - send a dummy email yourself to confirm your account
      # - click the confirm link in the email from www.formspree.io
      # - you're done. Happy mailing!
-  email = "dporras.mail@gmail.com"
+  email = "diego.porras@owasp.org"
 
     # Optional Matomo analytics (formerly piwik)
       # [params.analytics.matomo]
@@ -56,7 +56,7 @@ disqusShortname = ""
   [params.social]
   #facebook      = "full page or profile url in facebook"
   #googleplus    = "full profile url in googleplus"
-  email         = "dporras.mail@gmail.com"
+  email         = "diego.porras@owasp.org"
   #twitter       = "full profile url in twitter"
   #linkedin      = "full profile url in linkedin"
   #stackoverflow = "full profile url in stackoverflow"
