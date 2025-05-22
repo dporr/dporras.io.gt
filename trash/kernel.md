@@ -4,7 +4,7 @@ date: 2023-01-01T22:15:52Z
 image: images/kernel1.png
 weigth: 4
 showonlyimage: false
-draft: false
+draft: true
 ---
 
 Tile image source: https://static.lwn.net/images/pdf/LDD3/ch01.pdf

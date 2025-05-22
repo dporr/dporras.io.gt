@@ -4,7 +4,7 @@ image: images/devops1.PNG
 showonlyimage: false
 weight: 2
 date: 2020-05-24T18:00:45-06:00
-draft: false
+draft: true
 ---
 
 On March 15th Udacity launched a promotion aimed to help people affected by the pandemic. (yup! the Covid-19  thing I'm tired of). 

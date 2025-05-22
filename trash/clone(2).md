@@ -1,7 +1,7 @@
 ---
 title: "Kage bunshin no jutsu: clone(2)"
 date: 2023-01-07T23:07:09Z
-draft: false
+draft: true
 image: images/kagebunshin.jpeg
 ---
 
