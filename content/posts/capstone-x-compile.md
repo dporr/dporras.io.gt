@@ -10,6 +10,8 @@ draft: false
 x-compile libcapstone.so.4 in an x86 host and pass it to qemu-user aarch64 to run binaries that have a dependency on capstone
 
 ### X-Compile libcapstone for Aarch64
+Note: this post assumes you have a toolchain for aarch64, you can install it with
+`sudo apt install crossbuild-essential-arm64`, this will create the route `/usr/lib/aarch64-linux-gnu/` where our cross-compiled libraries will live. That package alos gives you the cross-platform toolchain prefixed with `/usr/bin/aarch64-linux-gnu-`
 
 Seems that capstone/cmake won't respect your `CC`, `CXX` variables when cross-compiling. This is how I got libcapstone cross-compiled Host: x86, target: aarch64
 ```shell
