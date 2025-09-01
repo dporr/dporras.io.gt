@@ -1,19 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on The Art of hacking - blog</title><link>http://aleph.theartofhacking.club/posts/</link><description>Recent content in Posts on The Art of hacking - blog</description><generator>Hugo</generator><language>en-us</language><atom:link href="http://aleph.theartofhacking.club/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Build u-boot with trusted firmware for STM32</title><link>http://aleph.theartofhacking.club/posts/embedded_notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://aleph.theartofhacking.club/posts/embedded_notes/</guid><description>&lt;h4 id="tldr">TL;DR&lt;/h4>
-&lt;p>This is a dumbed-down summary of different documentation pieces on u-boot, trusted firmware and STM.
-I use this to play around on a local STM board.&lt;/p>
-&lt;h3 id="compile-u-boot">Compile U-Boot&lt;/h3>
-&lt;p>Docs [1] &lt;a href="https://docs.u-boot.org/en/latest/board/st/index.html">https://docs.u-boot.org/en/latest/board/st/index.html&lt;/a>&lt;/p>
-&lt;ul>
-&lt;li>Chose a config from the supported boards under &lt;code>configs/&lt;/code>, in our case &lt;code>configs/stm32mp15_defconfig&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>make stm32mp15_defconfig
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>optional customize u-boot features&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>make menuconfig
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>chose a device tree from &lt;code>dts/upstream/src/&amp;lt;ARCH&amp;gt;/&amp;lt;VENDOR&amp;gt;/&amp;lt;BOARD&amp;gt;&lt;/code> in our case &lt;code>stm32mp157a-dk1&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>make DEVICE_TREE&lt;span style="color:#f92672">=&lt;/span>stm32mp157a-dk1 -j &lt;span style="color:#66d9ef">$(&lt;/span>nproc&lt;span style="color:#66d9ef">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="compiling-tf-a">Compiling TF-A&lt;/h3>
-&lt;p>From TF-A documentation for STM32MP1 [1]&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on The Art of hacking - blog</title><link>http://aleph.theartofhacking.club/posts/</link><description>Recent content in Posts on The Art of hacking - blog</description><generator>Hugo</generator><language>en-us</language><atom:link href="http://aleph.theartofhacking.club/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Build u-boot with trusted firmware for STM32</title><link>http://aleph.theartofhacking.club/posts/embedded_notes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://aleph.theartofhacking.club/posts/embedded_notes/</guid><description>&lt;h4 id="tldr"&gt;TL;DR&lt;/h4&gt;
+&lt;p&gt;This is a dumbed-down summary of different documentation pieces on u-boot, trusted firmware and STM.
+I use this to play around on a local STM board.&lt;/p&gt;
+&lt;h3 id="compile-u-boot"&gt;Compile U-Boot&lt;/h3&gt;
+&lt;p&gt;Docs [1] &lt;a href="https://docs.u-boot.org/en/latest/board/st/index.html"&gt;https://docs.u-boot.org/en/latest/board/st/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chose a config from the supported boards under &lt;code&gt;configs/&lt;/code&gt;, in our case &lt;code&gt;configs/stm32mp15_defconfig&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make stm32mp15_defconfig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;optional customize u-boot features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make menuconfig
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;chose a device tree from &lt;code&gt;dts/upstream/src/&amp;lt;ARCH&amp;gt;/&amp;lt;VENDOR&amp;gt;/&amp;lt;BOARD&amp;gt;&lt;/code&gt; in our case &lt;code&gt;stm32mp157a-dk1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make DEVICE_TREE&lt;span style="color:#f92672"&gt;=&lt;/span&gt;stm32mp157a-dk1 -j &lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;nproc&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="compiling-tf-a"&gt;Compiling TF-A&lt;/h3&gt;
+&lt;p&gt;From TF-A documentation for STM32MP1 [1]&lt;/p&gt;</description></item><item><title>Cross-compiling libcapstone correctly</title><link>http://aleph.theartofhacking.club/posts/capstone-x-compile/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://aleph.theartofhacking.club/posts/capstone-x-compile/</guid><description>&lt;h4 id="tldr"&gt;TL;DR&lt;/h4&gt;
+&lt;p&gt;x-compile libcapstone.so.4 in an x86 host and pass it to qemu-user aarch64 to run binaries that have a dependency on capstone&lt;/p&gt;
+&lt;h3 id="x-compile-libcapstone-for-aarch64"&gt;X-Compile libcapstone for Aarch64&lt;/h3&gt;
+&lt;p&gt;Seems that capstone/cmake won&amp;rsquo;t respect your &lt;code&gt;CC&lt;/code&gt;, &lt;code&gt;CXX&lt;/code&gt; variables when cross-compiling. This is how I got libcapstone cross-compiled Host: x86, target: aarch64&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo CROSS&lt;span style="color:#f92672"&gt;=&lt;/span&gt;/usr/bin/aarch64-linux-gnu- CAPSTONE_ARCHS&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;aarch64&amp;#34;&lt;/span&gt; ./make.sh install 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;They have that &lt;code&gt;CROSS&lt;/code&gt; variable and I gave it a try, turns out it works:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ file /usr/lib/libcapstone.so.4 
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;/usr/lib/libcapstone.so.4: ELF 64-bit LSB shared object, ARM aarch64, version &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;SYSV&lt;span style="color:#f92672"&gt;)&lt;/span&gt;, dynamically linked, BuildID&lt;span style="color:#f92672"&gt;[&lt;/span&gt;sha1&lt;span style="color:#f92672"&gt;]=&lt;/span&gt;e44f40ba64cbe01071992d33111a997d2a151d9e, not stripped
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And this is how you run the bins inside qemu-user or &amp;ldquo;locally&amp;rdquo;:&lt;/p&gt;</description></item></channel></rss>
